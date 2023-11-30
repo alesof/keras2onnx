@@ -24,10 +24,12 @@ pip install onnx==1.14.1
 
 1. Convert .h5 model to .pb model:
 ```
-python keras2pb.py
+python keras2pb.py <path-to-model.h5> --verbose
 ```
 
-3. Convert .pb in .onnx:
+2. Convert .pb in .onnx:
 ```
 python -m tf2onnx.convert --saved-model <path-to-generated-pb-model> --output <output-path\model-name.onnx>
-``` 
+```
+
+*Note* keras2pb.py can also be launched in silent mode without --verbose 
